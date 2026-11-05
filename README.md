@@ -1,0 +1,1 @@
+# Development-of-a-Digital-Leftover-Building-Materials-Exchange-Platform.
