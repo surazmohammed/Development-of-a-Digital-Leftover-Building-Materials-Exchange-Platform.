@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#245b43">
+  <meta name="description" content="Find, sell, exchange, and give away reusable leftover building materials. Build smarter and waste less.">
+  <title>ReBuild Exchange — Give Materials a Second Life</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="announcement">
+    <div class="container announcement-inner">
+      <span class="announcement-dot"></span>
+      <span>Give leftover materials a second life. Build smarter, waste less.</span>
+      <a href="#how-it-works">How it works <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="ReBuild Exchange home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none"><path d="M20 4.5 34.5 12.8v14.4L20 35.5 5.5 27.2V12.8L20 4.5Z" stroke="currentColor" stroke-width="2.3"/><path d="m13 16 7-4 7 4v8l-7 4-7-4v-8Z" stroke="currentColor" stroke-width="2.3"/><path d="m13.5 16.5 6.5 4 6.5-4M20 20.5V28" stroke="currentColor" stroke-width="2.3"/></svg>
+        </span>
+        <span class="brand-copy"><strong>ReBuild<span>Exchange</span></strong><small>BUILD SMART. WASTE LESS.</small></span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#home" data-view-link="home">Home</a>
+        <a class="nav-link" href="#marketplace" data-view-link="marketplace">Browse materials</a>
+        <a class="nav-link" href="#how-it-works">How it works</a>
+        <a class="nav-link nav-mobile-only" href="#favorites" data-view-link="favorites">Saved items <span class="nav-count" id="nav-favorite-count">0</span></a>
+        <button class="nav-list-btn" data-view-link="list">+ List materials</button>
+      </nav>
+      <button class="saved-link" data-view-link="favorites" aria-label="View saved items">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        <span>Saved</span><span class="saved-count" id="saved-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="view active" id="view-home" data-view="home">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <div class="eyebrow"><span class="eyebrow-icon">↗</span> A smarter way to build</div>
+            <h1>Your leftover could be someone's <em>next building material.</em></h1>
+            <p class="hero-description">Discover reusable construction materials, save on project costs, and give surplus supplies another purpose.</p>
+            <div class="hero-actions">
+              <button class="btn btn-primary btn-large" data-view-link="marketplace">Explore materials <span aria-hidden="true">→</span></button>
+              <button class="btn btn-secondary btn-large" data-view-link="list">List your materials <span aria-hidden="true">↗</span></button>
+            </div>
+            <div class="hero-proof">
+              <div class="avatar-stack" aria-hidden="true"><span>J</span><span>A</span><span>M</span><span>+</span></div>
+              <div><strong>A more resourceful building community</strong><small>Every reused material makes a difference.</small></div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-image-wrap">
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1100&q=85" alt="Construction worker at a building site" fetchpriority="high">
+              <div class="image-tint"></div>
+              <div class="hero-image-label"><span class="label-icon">↻</span><span><strong>Good materials.</strong><small>New possibilities.</small></span></div>
+            </div>
+            <div class="floating-note note-top"><span class="note-check">✓</span><span><strong>Reuse more</strong><small>Waste less</small></span></div>
+            <div class="floating-note note-bottom"><span class="note-icon">♧</span><span><strong>Built for circularity</strong><small>Materials stay useful</small></span></div>
+            <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+          </div>
+        </div>
+        <div class="hero-bottom container">
+          <div class="hero-bottom-label">A better way to source</div>
+          <div class="hero-bottom-item"><span>01</span> Find surplus materials</div>
+          <div class="hero-bottom-item"><span>02</span> Connect with owners</div>
+          <div class="hero-bottom-item"><span>03</span> Give materials new value</div>
+        </div>
+      </section>
+
+      <section class="quick-search-section">
+        <div class="container">
+          <form class="quick-search" id="hero-search-form">
+            <div class="search-field">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <label class="sr-only" for="hero-search">What materials are you looking for?</label>
+              <input id="hero-search" type="search" placeholder="What materials are you looking for?">
+            </div>
+            <div class="search-divider"></div>
+            <div class="search-location">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 10.2c0 5.3-7 10.2-7 10.2S5 15.5 5 10.2a7 7 0 1 1 14 0Z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+              <label class="sr-only" for="hero-location">Location</label>
+              <input id="hero-location" type="text" placeholder="Location (e.g. Lokoja)">
+            </div>
+            <button class="btn btn-primary search-submit" type="submit">Search materials <span aria-hidden="true">→</span></button>
+          </form>
+        </div>
+      </section>
+
+      <section class="section categories-section">
+        <div class="container">
+          <div class="section-heading">
+            <div><div class="eyebrow">Explore the marketplace</div><h2>Find what your project needs.</h2><p>Good materials deserve more than one life.</p></div>
+            <button class="text-link" data-view-link="marketplace">View all materials <span>→</span></button>
+          </div>
+          <div class="category-grid" id="category-grid">
+            <button class="category-card" data-category="Blocks & Bricks"><span class="category-visual cat-brick"><span class="category-symbol">▦</span></span><span class="category-title">Blocks & bricks</span><span class="category-meta">Masonry essentials <span>↗</span></span></button>
+            <button class="category-card" data-category="Tiles & Flooring"><span class="category-visual cat-tiles"><span class="category-symbol">▧</span></span><span class="category-title">Tiles & flooring</span><span class="category-meta">Finishing materials <span>↗</span></span></button>
+            <button class="category-card" data-category="Roofing"><span class="category-visual cat-roof"><span class="category-symbol">⌂</span></span><span class="category-title">Roofing</span><span class="category-meta">Sheets & accessories <span>↗</span></span></button>
+            <button class="category-card" data-category="Timber & Wood"><span class="category-visual cat-timber"><span class="category-symbol">▤</span></span><span class="category-title">Timber & wood</span><span class="category-meta">Reusable wood <span>↗</span></span></button>
+            <button class="category-card" data-category="Plumbing"><span class="category-visual cat-pipe"><span class="category-symbol">⌁</span></span><span class="category-title">Plumbing</span><span class="category-meta">Pipes & fittings <span>↗</span></span></button>
+            <button class="category-card" data-category="Doors & Windows"><span class="category-visual cat-window"><span class="category-symbol">⊞</span></span><span class="category-title">Doors & windows</span><span class="category-meta">Fixtures & frames <span>↗</span></span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section featured-section">
+        <div class="container">
+          <div class="section-heading">
+            <div><div class="eyebrow">Recently listed</div><h2>Materials with a second chance.</h2><p>Explore available materials shared by the community.</p></div>
+            <button class="text-link" data-view-link="marketplace">Browse marketplace <span>→</span></button>
+          </div>
+          <div class="listing-grid" id="featured-grid"></div>
+        </div>
+      </section>
+
+      <section class="impact-section" id="how-it-works">
+        <div class="container impact-grid">
+          <div class="impact-copy"><div class="eyebrow eyebrow-light">A circular way to build</div><h2>Less waste.<br><em>More value.</em></h2><p>Construction leftovers don't have to become waste. ReBuild Exchange helps useful materials find the next project that needs them.</p><button class="btn btn-light" data-view-link="list">Give materials a new life <span>→</span></button></div>
+          <div class="impact-steps">
+            <article class="impact-step"><span class="step-number">01</span><span class="step-icon">▤</span><div><h3>List what you have</h3><p>Share details, condition, quantity and how you want to pass it on.</p></div><span class="step-arrow">↗</span></article>
+            <article class="impact-step"><span class="step-number">02</span><span class="step-icon">⌕</span><div><h3>Find what you need</h3><p>Browse local listings and discover materials that fit your project.</p></div><span class="step-arrow">↗</span></article>
+            <article class="impact-step"><span class="step-number">03</span><span class="step-icon">↻</span><div><h3>Connect and reuse</h3><p>Contact the owner and agree on collection, delivery and terms.</p></div><span class="step-arrow">↗</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="container cta-card"><div><div class="eyebrow">Have materials to spare?</div><h2>Turn unused supplies into an opportunity.</h2><p>List your leftover materials and help someone build more resourcefully.</p></div><button class="btn btn-primary btn-large" data-view-link="list">List materials for free <span>→</span></button><div class="cta-decoration" aria-hidden="true">↗</div></div>
+      </section>
+    </section>
+
+    <section class="view inner-view" id="view-marketplace" data-view="marketplace">
+      <div class="page-hero"><div class="container"><div class="eyebrow">The marketplace</div><h1>Find materials for your <em>next project.</em></h1><p>Discover useful surplus materials shared by people in your community.</p></div></div>
+      <div class="container marketplace-layout">
+        <aside class="filter-panel" id="filter-panel">
+          <div class="filter-head"><h2>Filters</h2><button class="text-link" id="clear-filters">Clear all</button><button class="filter-close" id="filter-close" aria-label="Close filters">×</button></div>
+          <div class="filter-group"><label for="filter-category">Category</label><select id="filter-category"><option value="">All categories</option><option>Blocks & Bricks</option><option>Tiles & Flooring</option><option>Roofing</option><option>Timber & Wood</option><option>Plumbing</option><option>Doors & Windows</option><option>Electrical</option><option>Paint & Finishing</option><option>Other</option></select></div>
+          <div class="filter-group"><label for="filter-type">Listing type</label><select id="filter-type"><option value="">All types</option><option value="sell">For sale</option><option value="exchange">Exchange</option><option value="giveaway">Give away</option></select></div>
+          <div class="filter-group"><label for="filter-condition">Condition</label><select id="filter-condition"><option value="">Any condition</option><option>Unused</option><option>Good</option><option>Fair</option></select></div>
+          <div class="filter-group"><label for="filter-location">Location</label><input id="filter-location" type="text" placeholder="Town or state"></div>
+          <div class="filter-group"><label>Price range (₦)</label><div class="price-range"><input id="filter-min-price" type="number" min="0" placeholder="Min" aria-label="Minimum price"><span>—</span><input id="filter-max-price" type="number" min="0" placeholder="Max" aria-label="Maximum price"></div><small>Price filters apply to sale listings.</small></div>
+          <button class="btn btn-primary filter-apply" id="apply-filters">Apply filters</button>
+        </aside>
+        <div class="marketplace-content">
+          <div class="market-toolbar"><div class="market-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><label class="sr-only" for="market-search">Search materials</label><input id="market-search" type="search" placeholder="Search materials..."></div><button class="btn btn-secondary filter-open" id="filter-open">☷ Filters</button><label class="sort-control"><span>Sort:</span><select id="sort-order"><option value="newest">Recently listed</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="title">Name A–Z</option></select></label></div>
+          <div class="results-line"><span id="results-count">0 materials found</span><span>Showing available listings</span></div>
+          <div class="listing-grid marketplace-grid" id="marketplace-grid"></div>
+          <div class="empty-state hidden" id="market-empty"><div class="empty-icon">⌕</div><h3>No materials found</h3><p>Try another keyword or adjust your filters.</p><button class="btn btn-secondary" id="empty-clear">Clear filters</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view inner-view" id="view-list" data-view="list">
+      <div class="page-hero"><div class="container"><div class="eyebrow">Share with the community</div><h1>Give your materials a <em>new purpose.</em></h1><p>Tell people what you have available. Clear details help the right person find it.</p></div></div>
+      <div class="container form-page-grid">
+        <div class="form-main">
+          <form id="listing-form" class="listing-form" novalidate>
+            <input type="hidden" id="listing-id">
+            <div class="form-section"><div class="form-section-heading"><span>01</span><div><h2>Material information</h2><p>Describe the item you want to share.</p></div></div>
+              <div class="field"><label for="material-title">Listing title <span>*</span></label><input id="material-title" name="title" maxlength="80" required placeholder="e.g. 200 unused concrete blocks"><small>Be clear and specific.</small></div>
+              <div class="field-row"><div class="field"><label for="material-category">Category <span>*</span></label><select id="material-category" required><option value="">Choose a category</option><option>Blocks & Bricks</option><option>Tiles & Flooring</option><option>Roofing</option><option>Timber & Wood</option><option>Plumbing</option><option>Doors & Windows</option><option>Electrical</option><option>Paint & Finishing</option><option>Other</option></select></div><div class="field"><label for="material-condition">Condition <span>*</span></label><select id="material-condition" required><option value="">Choose condition</option><option>Unused</option><option>Good</option><option>Fair</option></select></div></div>
+              <div class="field-row"><div class="field"><label for="material-quantity">Quantity <span>*</span></label><input id="material-quantity" type="number" min="0.01" step="any" required placeholder="e.g. 100"></div><div class="field"><label for="material-unit">Unit <span>*</span></label><select id="material-unit" required><option value="">Choose unit</option><option>pieces</option><option>bags</option><option>bundles</option><option>boxes</option><option>lengths</option><option>square metres</option><option>cubic metres</option><option>sets</option><option>litres</option><option>other</option></select></div></div>
+              <div class="field"><label for="material-description">Description <span>*</span></label><textarea id="material-description" rows="5" maxlength="1200" required placeholder="Describe dimensions, quantity, condition, why it is available and any important details."></textarea><div class="field-foot"><small>Do not include private information.</small><small id="description-count">0 / 1200</small></div></div>
+            </div>
+            <div class="form-section"><div class="form-section-heading"><span>02</span><div><h2>Photo</h2><p>Add a clear photo so people can see what is available.</p></div></div>
+              <label class="upload-zone" for="material-image" id="upload-zone"><input id="material-image" type="file" accept="image/jpeg,image/png,image/webp"><span class="upload-icon">↑</span><strong>Click to upload a photo</strong><span>JPG, PNG or WebP · Max 1.5 MB</span><span class="upload-preview hidden" id="upload-preview"><img id="preview-image" alt="Selected material preview"><button type="button" id="remove-image" class="remove-image">Remove photo</button></span></label>
+            </div>
+            <div class="form-section"><div class="form-section-heading"><span>03</span><div><h2>How would you like to pass it on?</h2><p>Choose the option that works for you.</p></div></div>
+              <div class="transaction-options">
+                <label class="transaction-option"><input type="radio" name="transaction" value="sell" checked><span class="transaction-option-inner"><span class="transaction-icon">₦</span><strong>Sell</strong><small>Set an asking price</small></span></label>
+                <label class="transaction-option"><input type="radio" name="transaction" value="exchange"><span class="transaction-option-inner"><span class="transaction-icon">↔</span><strong>Exchange</strong><small>Trade for something</small></span></label>
+                <label class="transaction-option"><input type="radio" name="transaction" value="giveaway"><span class="transaction-option-inner"><span class="transaction-icon">♡</span><strong>Give away</strong><small>Offer it for free</small></span></label>
+              </div>
+              <div class="field" id="price-field"><label for="material-price">Asking price (₦) <span>*</span></label><div class="input-prefix"><span>₦</span><input id="material-price" type="number" min="1" step="1" placeholder="e.g. 15000"></div><small>Enter the total asking price for the listed quantity.</small></div>
+              <div class="field hidden" id="exchange-field"><label for="material-exchange">What would you like in return? <span>*</span></label><input id="material-exchange" maxlength="250" placeholder="e.g. timber, plumbing supplies or an equivalent item"></div>
+              <div class="notice-box"><span>ⓘ</span><p>Agree on the condition, collection or delivery, and any payment directly with the other person. ReBuild Exchange does not process payments.</p></div>
+            </div>
+            <div class="form-section"><div class="form-section-heading"><span>04</span><div><h2>Location and contact</h2><p>Help interested people know where and how to reach you.</p></div></div>
+              <div class="field-row"><div class="field"><label for="material-area">Town / area <span>*</span></label><input id="material-area" maxlength="80" required placeholder="e.g. Lokoja"></div><div class="field"><label for="material-state">State <span>*</span></label><input id="material-state" maxlength="80" required placeholder="e.g. Kogi State"></div></div>
+              <div class="field"><label for="material-phone">Contact phone number <span>*</span></label><input id="material-phone" type="tel" maxlength="24" required placeholder="e.g. 08012345678"><small>Use a number you are comfortable sharing with interested people.</small></div>
+              <div class="field"><label for="material-whatsapp">WhatsApp number <span class="optional-label">Optional</span></label><input id="material-whatsapp" type="tel" maxlength="24" placeholder="Leave blank to use your phone number"></div>
+            </div>
+            <div class="form-error hidden" id="form-error" role="alert"></div>
+            <div class="form-actions"><button type="button" class="btn btn-secondary" id="cancel-listing">Cancel</button><button type="submit" class="btn btn-primary btn-large"><span id="submit-label">Publish listing</span> <span>→</span></button></div>
+          </form>
+        </div>
+        <aside class="form-sidebar"><div class="form-tip-card"><span class="tip-icon">✦</span><h3>Help your listing stand out</h3><ul><li>Use a clear, recent photo.</li><li>Be honest about the condition.</li><li>Include accurate quantity and measurements.</li><li>Explain collection or delivery expectations.</li><li>Never list unsafe or unusable materials.</li></ul></div><div class="privacy-card"><span>⌑</span><div><strong>Your information</strong><p>This demo stores listings in this browser. It does not publish them to a shared online database.</p></div></div></aside>
+      </div>
+    </section>
+
+    <section class="view inner-view" id="view-details" data-view="details">
+      <div class="container detail-container"><button class="back-link" id="details-back">← Back to materials</button><div id="details-content"></div></div>
+    </section>
+
+    <section class="view inner-view" id="view-favorites" data-view="favorites">
+      <div class="page-hero"><div class="container"><div class="eyebrow">Your shortlist</div><h1>Materials you've <em>saved.</em></h1><p>Keep useful finds close while you plan your next project.</p></div></div>
+      <div class="container favorites-page"><div class="results-line"><span id="favorites-count">0 saved materials</span></div><div class="listing-grid" id="favorites-grid"></div><div class="empty-state hidden" id="favorites-empty"><div class="empty-icon">♡</div><h3>No saved materials yet</h3><p>Tap the heart on a material card to save it here.</p><button class="btn btn-primary" data-view-link="marketplace">Explore materials</button></div></div>
+    </section>
+
+    <section class="view inner-view" id="view-my-listings" data-view="my-listings">
+      <div class="page-hero"><div class="container"><div class="eyebrow">Your materials</div><h1>Manage your <em>listings.</em></h1><p>Update availability and keep your material information current on this device.</p></div></div>
+      <div class="container my-listings-page"><div class="dashboard-stats"><div><span id="stat-total">0</span><small>Total listings</small></div><div><span id="stat-available">0</span><small>Available</small></div><div><span id="stat-sold">0</span><small>Sold</small></div></div><div class="listing-grid" id="my-listings-grid"></div><div class="empty-state hidden" id="my-listings-empty"><div class="empty-icon">▤</div><h3>You haven't listed anything yet</h3><p>Your materials will appear here after you publish a listing in this browser.</p><button class="btn btn-primary" data-view-link="list">List your first material</button></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand"><a class="brand brand-light" href="#home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4.5 34.5 12.8v14.4L20 35.5 5.5 27.2V12.8L20 4.5Z" stroke="currentColor" stroke-width="2.3"/><path d="m13 16 7-4 7 4v8l-7 4-7-4v-8Z" stroke="currentColor" stroke-width="2.3"/></svg></span><span class="brand-copy"><strong>ReBuild<span>Exchange</span></strong><small>BUILD SMART. WASTE LESS.</small></span></a><p>A more resourceful way to share leftover building materials and help useful supplies find their next project.</p></div>
+      <div class="footer-links"><strong>Explore</strong><a href="#marketplace" data-view-link="marketplace">Browse materials</a><a href="#list" data-view-link="list">List materials</a><a href="#favorites" data-view-link="favorites">Saved materials</a></div>
+      <div class="footer-links"><strong>Our approach</strong><a href="#how-it-works">How it works</a><a href="#home">Reuse over waste</a><a href="#home">Community first</a></div>
+      <div class="footer-note"><span class="footer-leaf">↻</span><strong>Give materials another life.</strong><p>Small acts of reuse can make building more resourceful.</p><button class="footer-reset" id="reset-demo">Reset demo data</button></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="current-year"></span> ReBuild Exchange. Mini project prototype.</span><span>Designed for a more circular building future.</span></div>
+  </footer>
+
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <div class="modal-backdrop hidden" id="confirm-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="confirm-modal"><div class="modal-icon">?</div><h2 id="modal-title">Are you sure?</h2><p id="modal-message">This action cannot be undone.</p><div class="modal-actions"><button class="btn btn-secondary" id="modal-cancel">Cancel</button><button class="btn btn-danger" id="modal-confirm">Confirm</button></div></div></div>
+  <script src="js/materials.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/marketplace.js"></script>
+  <script src="js/listing-form.js"></script>
+  <script src="js/details.js"></script>
+  <script src="js/favorites.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
